@@ -5,16 +5,16 @@ let mole = document.querySelector(".mole");
 let instruction = document.getElementsByClassName("instruction");
 let faded = document.getElementById("faded");
 var timetaken = 0;
-
+let timerid;
 function easy() {
   scores = 0;
   score.innerHTML = scores;
-  times = 60;
+  times = 12;
   timetaken = 1000;
   time.innerHTML = 60;
   document.getElementById("myDIV").style.display = "none";
   setInterval(randomSelect, timetaken);
-  let timerid = setInterval(time_remainder, 1000);
+  timerid = setInterval(time_remainder, 1000);
 }
 function medium() {
   scores = 0;
@@ -24,7 +24,7 @@ function medium() {
   time.innerHTML = 60;
   document.getElementById("myDIV").style.display = "none";
   setInterval(randomSelect, timetaken);
-  let timerid = setInterval(time_remainder, 1000);
+  timerid = setInterval(time_remainder, 1000);
 }
 function hard() {
   scores = 0;
@@ -34,7 +34,7 @@ function hard() {
   time.innerHTML = 60;
   document.getElementById("myDIV").style.display = "none";
   setInterval(randomSelect, timetaken);
-  let timerid = setInterval(time_remainder, 1000);
+  timerid = setInterval(time_remainder, 1000);
 }
 
 let hitPosition;
@@ -71,6 +71,7 @@ function time_remainder() {
   if (times === 0) {
     clearInterval(timerid);
     alert("Your final score is " + scores + " . Want to play again?");
+    console.log("hrey");
     location.reload();
   }
 }
