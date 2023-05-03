@@ -74,6 +74,7 @@ function time_remainder() {
     console.log("hrey");
     location.reload();
   }
+  
 }
 
 function reload() {
